@@ -10,6 +10,8 @@ import Foundation
 
 extension Double {
     
-    var toIntString: String { String(Int(rounded())) }
+    var toIntString: String { String(toRoundedInt) }
+    
+    var toRoundedInt: Int { Int(rounded()) }
     
 }
