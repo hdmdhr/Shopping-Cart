@@ -22,14 +22,14 @@ class CountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countLabel.text = "\(stepper.value)"
+        countLabel.text = stepper.value.toIntString
     }
 
     
     // MARK: - @IBActions
     
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
-        countLabel.text = "\(stepper.value)"
+        countLabel.text = stepper.value.toIntString
     }
     
 

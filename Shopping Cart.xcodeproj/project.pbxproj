@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221DD19D2723A4DF0020985F /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221DD19C2723A4DF0020985F /* Double+.swift */; };
 		2233535E27239C72001CF987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233535D27239C72001CF987 /* AppDelegate.swift */; };
 		2233536027239C72001CF987 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233535F27239C72001CF987 /* SceneDelegate.swift */; };
 		2233536227239C72001CF987 /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2233536127239C72001CF987 /* CountViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221DD19C2723A4DF0020985F /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		2233535A27239C72001CF987 /* Shopping Cart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping Cart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2233535D27239C72001CF987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2233535F27239C72001CF987 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221DD19B2723A4C60020985F /* Ext */ = {
+			isa = PBXGroup;
+			children = (
+				221DD19C2723A4DF0020985F /* Double+.swift */,
+			);
+			path = Ext;
+			sourceTree = "<group>";
+		};
 		2233535127239C72001CF987 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 				2233536327239C72001CF987 /* Main.storyboard */,
 				2233536627239C73001CF987 /* Assets.xcassets */,
 				2233536827239C73001CF987 /* LaunchScreen.storyboard */,
+				221DD19B2723A4C60020985F /* Ext */,
 				2233536B27239C73001CF987 /* Info.plist */,
 			);
 			path = "Shopping Cart";
@@ -140,6 +151,7 @@
 			files = (
 				2233536227239C72001CF987 /* CountViewController.swift in Sources */,
 				2233535E27239C72001CF987 /* AppDelegate.swift in Sources */,
+				221DD19D2723A4DF0020985F /* Double+.swift in Sources */,
 				2233536027239C72001CF987 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
