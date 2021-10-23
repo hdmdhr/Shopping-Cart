@@ -10,11 +10,28 @@ import UIKit
 
 class CountViewController: UIViewController {
 
+    // MARK: - @IBOutlets
+    
+    @IBOutlet weak var productImageView: UIImageView!
+    @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var stepper: UIStepper!
+    
+    
+    // MARK: - Lifecycles
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        countLabel.text = "\(stepper.value)"
     }
 
+    
+    // MARK: - @IBActions
+    
+    @IBAction func stepperValueChanged(_ sender: UIStepper) {
+        countLabel.text = "\(stepper.value)"
+    }
+    
 
 }
 

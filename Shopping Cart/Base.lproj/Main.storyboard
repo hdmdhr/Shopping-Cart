@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DjG-aq-Y0t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -44,7 +44,18 @@
                             </label>
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7RM-0d-jqJ">
                                 <rect key="frame" x="160" y="432" width="94" height="32"/>
+                                <connections>
+                                    <action selector="stepperValueChanged:" destination="9KQ-sx-xao" eventType="valueChanged" id="HxP-Lk-SNl"/>
+                                </connections>
                             </stepper>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RQ3-SL-zYZ">
+                                <rect key="frame" x="167" y="100.5" width="80" height="78.5"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="ZwJ-fG-utY"/>
+                                    <constraint firstAttribute="width" secondItem="RQ3-SL-zYZ" secondAttribute="height" id="bmB-5b-gzB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cNK-aP-JDD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,6 +63,8 @@
                             <constraint firstItem="WFd-6l-W5j" firstAttribute="centerX" secondItem="6kw-uh-Gdf" secondAttribute="centerX" id="Hvo-jB-Rwa"/>
                             <constraint firstItem="7RM-0d-jqJ" firstAttribute="centerX" secondItem="6kw-uh-Gdf" secondAttribute="centerX" id="PTq-19-SuV"/>
                             <constraint firstItem="7RM-0d-jqJ" firstAttribute="centerY" secondItem="6kw-uh-Gdf" secondAttribute="centerY" id="SLK-wV-oRD"/>
+                            <constraint firstItem="RQ3-SL-zYZ" firstAttribute="centerX" secondItem="WFd-6l-W5j" secondAttribute="centerX" id="YWI-Qd-FHh"/>
+                            <constraint firstItem="RQ3-SL-zYZ" firstAttribute="centerY" secondItem="WFd-6l-W5j" secondAttribute="centerY" id="ZCz-bi-dFq"/>
                             <constraint firstItem="rUT-ju-PAH" firstAttribute="centerX" secondItem="6kw-uh-Gdf" secondAttribute="centerX" id="eGm-Ed-7mS"/>
                             <constraint firstItem="rUT-ju-PAH" firstAttribute="centerY" secondItem="WFd-6l-W5j" secondAttribute="bottom" id="odN-a5-RWN"/>
                             <constraint firstItem="WFd-6l-W5j" firstAttribute="leading" secondItem="cNK-aP-JDD" secondAttribute="leading" id="qe7-am-G2w"/>
@@ -59,7 +72,12 @@
                             <constraint firstItem="WFd-6l-W5j" firstAttribute="height" secondItem="cNK-aP-JDD" secondAttribute="height" multiplier="0.25" id="vY9-mw-vIm"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Pj0-kD-hb8"/>
+                    <tabBarItem key="tabBarItem" title="Item 1" image="applelogo" catalog="system" id="Pj0-kD-hb8"/>
+                    <connections>
+                        <outlet property="countLabel" destination="rUT-ju-PAH" id="vVE-tg-YvT"/>
+                        <outlet property="productImageView" destination="RQ3-SL-zYZ" id="Hla-YN-m3a"/>
+                        <outlet property="stepper" destination="7RM-0d-jqJ" id="Heh-Ag-fj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53D-ok-hAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,8 +103,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
