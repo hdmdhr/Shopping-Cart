@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="eFT-dG-RfO">
             <objects>
-                <viewController id="9KQ-sx-xao" sceneMemberID="viewController">
+                <viewController id="9KQ-sx-xao" customClass="CountViewController" customModule="Shopping_Cart" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kw-uh-Gdf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
