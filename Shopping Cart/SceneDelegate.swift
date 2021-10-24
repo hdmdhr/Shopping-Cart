@@ -21,11 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let tabBarVc = UITabBarController()
-        let countVc = UIViewController()
-        countVc.tabBarItem = .init(title: "Apple", image: UIImage(systemName: "applelogo"), tag: 0)
+        let vc = UIViewController.instantiate()
         
         tabBarVc.viewControllers = [
-            countVc,
+            vc,
             UIViewController(),
             UIViewController(),
             UIViewController()
