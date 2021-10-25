@@ -27,7 +27,7 @@
         <!--Item 1-->
         <scene sceneID="eFT-dG-RfO">
             <objects>
-                <viewController storyboardIdentifier="CountProductViewController" id="9KQ-sx-xao" customClass="CountProductViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountProductViewController" id="9KQ-sx-xao" customClass="CountProductViewController" customModule="Shopping_Cart" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6kw-uh-Gdf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,7 +45,7 @@
                             <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="7RM-0d-jqJ">
                                 <rect key="frame" x="160" y="432" width="94" height="32"/>
                                 <connections>
-                                    <action selector="stepperValueChanged:" destination="9KQ-sx-xao" eventType="valueChanged" id="HxP-Lk-SNl"/>
+                                    <action selector="stepperValueChanged:" destination="9KQ-sx-xao" eventType="valueChanged" id="pO9-Gc-h2z"/>
                                 </connections>
                             </stepper>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RQ3-SL-zYZ">
@@ -74,9 +74,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" image="applelogo" catalog="system" id="Pj0-kD-hb8"/>
                     <connections>
-                        <outlet property="countLabel" destination="rUT-ju-PAH" id="vVE-tg-YvT"/>
-                        <outlet property="productImageView" destination="RQ3-SL-zYZ" id="Hla-YN-m3a"/>
-                        <outlet property="stepper" destination="7RM-0d-jqJ" id="Heh-Ag-fj4"/>
+                        <outlet property="productCountLabel" destination="rUT-ju-PAH" id="jCJ-N4-gnW"/>
+                        <outlet property="productImageView" destination="RQ3-SL-zYZ" id="Omz-H8-SdV"/>
+                        <outlet property="stepper" destination="7RM-0d-jqJ" id="hUZ-uj-tuq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53D-ok-hAH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
