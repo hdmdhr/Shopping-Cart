@@ -22,6 +22,7 @@ class CountProductViewController: UIViewController {
     private(set) var productName: String!
     private(set) var increment: Int!
     private(set) var maxPurchaseNumber: Int!
+    private let saveLoadProductManager = SaveLoadProductManager()
     
     private var productNumber: Int { stepper.value.toRoundedInt }
     
@@ -44,6 +45,7 @@ class CountProductViewController: UIViewController {
         
         stepper.maximumValue = Double(maxPurchaseNumber)
         stepper.stepValue = Double(increment)
+        stepper.value = Double(saveLoadProductManager.loadNumberForProduct(productName))
         
         setProductCountLabel()
     }
@@ -59,6 +61,7 @@ class CountProductViewController: UIViewController {
 
     @IBAction func stepperValueChanged(_ sender: UIStepper) {
         setProductCountLabel()
+        saveLoadProductManager.saveNumberForProduct(productName, number: productNumber)
     }
     
     
