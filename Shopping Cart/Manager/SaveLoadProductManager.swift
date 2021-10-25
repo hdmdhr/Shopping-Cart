@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SaveLoadProductManager {
+class SaveLoadProductManager: CanSaveLoadProduct {
     
     func saveNumberForProduct(_ product: String, number: Int) {
         UserDefaults.standard.setValue(number, forKey: product)
