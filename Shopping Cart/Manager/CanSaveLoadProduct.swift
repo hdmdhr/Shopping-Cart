@@ -11,6 +11,10 @@ import Foundation
 protocol CanSaveLoadProduct {
     
     func saveNumberForProduct(_ product: String, number: Int)
+    /// Load number for the given product name
+    /// - parameters:
+    ///   - product: name of the product
+    /// - returns: the number of the given product, if has none, return 0
     func loadNumberForProduct(_ product: String) -> Int
     
 }
