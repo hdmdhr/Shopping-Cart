@@ -22,14 +22,19 @@ class CountProductViewController: UIViewController {
     private(set) var productName: String!
     private(set) var increment: Int!
     private(set) var maxPurchaseNumber: Int!
-    private let saveLoadProductManager = SaveLoadProductManager()
+    private(set) var saveLoadProductManager: CanSaveLoadProduct!
     
     private var productNumber: Int { stepper.value.toRoundedInt }
     
-    func configure(productName: String, increment: Int, maxPurchaseNumber: Int) {
+    func configure(productName: String,
+                   increment: Int,
+                   maxPurchaseNumber: Int,
+                   saveLoadProductManager: CanSaveLoadProduct)
+    {
         self.productName = productName
         self.increment = increment
         self.maxPurchaseNumber = maxPurchaseNumber
+        self.saveLoadProductManager = saveLoadProductManager
         
         tabBarItem.title = productName
     }
