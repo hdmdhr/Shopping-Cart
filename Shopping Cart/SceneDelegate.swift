@@ -21,13 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         let tabBarVc = UITabBarController()
-        let vc = UIViewController.instantiate()
+        let vc = CountProductViewController.instantiate()
+        vc.configure(productName: "Apple", increment: 1, maxPurchaseNumber: 8)
+        let vc2 = CountProductViewController.instantiate()
+        vc2.configure(productName: "Banana", increment: 5, maxPurchaseNumber: 15)
+        let vc3 = CountProductViewController.instantiate()
+        vc3.configure(productName: "Egg", increment: 12, maxPurchaseNumber: 36)
+        let vc4 = CountProductViewController.instantiate()
+        vc4.configure(productName: "Shoe", increment: 2, maxPurchaseNumber: 8)
         
         tabBarVc.viewControllers = [
             vc,
-            UIViewController(),
-            UIViewController(),
-            UIViewController()
+            vc2,
+            vc3,
+            vc4
         ]
         
         window.rootViewController = tabBarVc
